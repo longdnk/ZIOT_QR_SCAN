@@ -1,0 +1,76 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reader {
+    width: 60%;
+}
+
+#result {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.iconSuccess {
+    width: 150px;
+    height: 150px;
+}
+
+.iconCustom {
+    width: 250px;
+    height: 250px;
+}
+
+.no1 {
+    display: inline-block;
+}
+
+#play-animation {
+    animation: progress-animation 3s forwards;
+}
+
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.containerOnStart .progress-bar {
+    position: absolute;
+    height: 100%;
+    border-radius: 7px;
+    background-color: #6c55f9;
+}
+
+.containerOnStart {
+    height: 20px;
+    background-color: #CCC;
+    position: relative;
+    border-radius: 7px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: #009686;
+    /* transform: 0.5s; color: white;*/
+}
+
+td {
+    border-top: 5px solid black;
+    padding-right: 15px;
+}
+
+#html5-qrcode-button-camera-stop, #html5-qrcode-button-camera-start {
+    color: white;
+    background: blue;
+}
