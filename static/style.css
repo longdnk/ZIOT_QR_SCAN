@@ -70,7 +70,11 @@ td {
     padding-right: 15px;
 }
 
-#html5-qrcode-button-camera-stop, #html5-qrcode-button-camera-start {
+#html5-qrcode-button-camera-stop, #html5-qrcode-button-camera-start, #html5-qrcode-button-camera-permission, #html5-qrcode-button-file-selection {
     color: white;
     background: blue;
+}
+
+#html5-qrcode-anchor-scan-type-change {
+    cursor: pointer;
 }
