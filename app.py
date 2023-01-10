@@ -31,9 +31,8 @@ def encrypt(text, s):
     # traverse text
     for i in range(len(text)):
         char = text[i]
-
         # Encrypt uppercase characters
-        if (char.isupper()):
+        if char.isupper():
             result += chr((ord(char) + s - 65) % 26 + 65)
 
         # Encrypt lowercase characters
@@ -58,26 +57,9 @@ def send():
         # endregion
         subject = name
         body = "Employee name: " + eName + "\nTime check in: " + time + "\n"
-        # body = u' '.join((name, email, message)).encode('utf-8').strip()
-        # body = r.join((name, '\n', email, '\n', message)).encode('utf-8').strip()
         msg = f'Subject: {subject}\n\n{body}'.encode('utf-8').strip()
         smtp.sendmail('kimlong101020@gmail.com', ['longdnk@ziot.vn', 'thanhdd@ziot.vn', 'vinhlt@ziot.vn'], msg)
-    # data = {
-    #     'access_token': key,
-    #     'username': 'longdnk',
-    #     'name': 'Test request',
-    #     'approvers': 'vinhlt',
-    #     'followers': '',
-    #     'content': "Test content",
-    # }
-    # response = requests.get(urlDomain('https://request.base.vn/'))
-    # print(response)
     return redirect(url_for('success'))
-
-
-# def urlDomain(domain):
-#     url = f"https://request." + domain + "/extapi/v1/request/direct/create"
-#     return url
 
 
 @app.route('/success')
